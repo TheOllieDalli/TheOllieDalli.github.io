@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>
+Double Trouble Cup | Premiership of Darts
+</title>
+
+
+<link rel="stylesheet" href="style.css">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+</head>
+
+
+
+<body>
+
+
+
+<header class="hero">
+
+
+<div class="logo">
+
+
+<div class="logo-icon">
+
+🎯
+
+</div>
+
+
+<h1>
+
+PREMIERSHIP OF DARTS
+
+</h1>
+
+
+<p>
+
+CUP COMPETITIONS
+
+</p>
+
+
+</div>
+
+
+</header>
+
+
+
+
+
+
+
+<main class="homepage">
+
+
+
+
+
+
+
+<section class="competition-banner">
+
+
+<span class="live-badge">
+
+LIVE
+
+</span>
+
+
+<h2>
+
+Double Trouble Cup
+
+</h2>
+
+
+
+<div class="progress-bar">
+
+<div class="progress-fill"></div>
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section class="competition-tabs">
+
+
+<button class="active"
+onclick="showTab('overview',this)">
+
+Overview
+
+</button>
+
+
+
+<button onclick="showTab('groups',this)">
+
+Groups
+
+</button>
+
+
+
+<button onclick="showTab('fixtures',this)">
+
+Fixtures
+
+</button>
+
+
+
+<button onclick="showTab('knockout',this)">
+
+Knockout
+
+</button>
+
+
+
+<button onclick="showTab('statistics',this)">
+
+Statistics
+
+</button>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section id="overview" class="tab-section">
+
+
+<h2 class="section-title">
+
+📅 This Week's Games
+
+</h2>
+
+
+<div id="overviewFixtures">
+
+
+<div class="card">
+
+Loading this week's games...
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section id="groups" class="tab-section">
+
+
+<h2 class="section-title">
+
+Group Tables
+
+</h2>
+
+
+<div id="groupContainer">
+
+
+<div class="card">
+
+Loading groups...
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section id="fixtures" class="tab-section">
+
+
+<h2 class="section-title">
+
+All Fixtures
+
+</h2>
+
+
+
+
+
+<div class="fixture-filter">
+
+
+<label>
+
+Filter by Group:
+
+</label>
+
+
+
+<select id="fixtureGroupFilter"
+onchange="filterFixtures()">
+
+
+
+<option value="all">
+
+All Groups
+
+</option>
+
+
+<option value="A">
+
+Group A
+
+</option>
+
+
+<option value="B">
+
+Group B
+
+</option>
+
+
+<option value="C">
+
+Group C
+
+</option>
+
+
+<option value="D">
+
+Group D
+
+</option>
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+
+<div id="fixtureContainer">
+
+
+<div class="card">
+
+Loading fixtures...
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<section id="knockout" class="tab-section">
+
+
+<h2 class="section-title">
+
+🏆 Knockout Stage
+
+</h2>
+
+
+
+<div id="knockoutBracket">
+
+
+<div class="card">
+
+Loading knockout...
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- STATISTICS -->
+
+
+<section id="statistics" class="tab-section">
+
+
+<h2 class="section-title">
+
+📈 Statistics
+
+</h2>
+
+
+
+
+
+<div id="statsContainer" class="stats-grid">
+
+
+
+<div class="card stat-card">
+
+
+<h3>
+
+🏆 Highest Average
+
+</h3>
+
+
+<div id="highestAverage">
+
+Loading...
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card stat-card">
+
+
+<h3>
+
+🎯 Most Legs Won
+
+</h3>
+
+
+<div id="mostLegs">
+
+Loading...
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card stat-card">
+
+
+<h3>
+
+🏆 Tournament Leader
+
+</h3>
+
+
+<div id="tournamentLeader">
+
+Loading...
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card rankings-card">
+
+
+<h3>
+
+📊 Player Rankings
+
+</h3>
+
+
+
+<div id="playerRankings">
+
+
+Loading...
+
+
+</div>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+</main>
+
+
+
+
+
+
+
+
+<div id="resultModal">
+
+
+<div class="modal-content">
+
+
+<div id="resultModalBody">
+
+</div>
+
+
+<button onclick="closeResult()">
+
+Close
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div id="fixtureModal">
+
+
+<div class="modal-content">
+
+
+<div id="fixtureModalBody">
+
+</div>
+
+
+<button onclick="closeFixtureEditor()">
+
+Close
+
+</button>
+
+
+</div>
+
+
+</div>
+<!-- KNOCKOUT RESULT MODAL -->
+
+
+<div id="knockoutModal">
+
+
+<div class="modal-content">
+
+
+<div id="knockoutModalBody">
+
+</div>
+
+
+
+<button 
+class="fixture-close-button"
+onclick="closeKnockoutResult()">
+
+
+Cancel
+
+
+</button>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<footer>
+
+© 2026 Premiership of Darts Cup Competitions
+
+</footer>
+
+
+
+
+
+
+
+
+<script src="data.js"></script>
+
+<script src="storage.js"></script>
+
+<script src="results.js"></script>
+
+<script src="fixtures.js"></script>
+
+<script src="knockout.js"></script>
+
+<script src="competition.js"></script>
+
+
+
+</body>
+
+</html>
