@@ -1,0 +1,2020 @@
+/* ==========================================
+   PREMIERSHIP OF DARTS
+   CUP COMPETITIONS
+   GLOBAL STYLE
+   VERSION 1.2
+========================================== */
+
+
+:root{
+
+    --background:#090909;
+
+    --surface:#171717;
+
+    --surface-light:#222222;
+
+    --red:#d90429;
+
+    --green:#00c853;
+
+    --gold:#f4c430;
+
+    --white:#ffffff;
+
+    --grey:#aaaaaa;
+
+    --radius:18px;
+
+    --shadow:
+    0 10px 30px rgba(0,0,0,.5);
+
+}
+
+
+
+
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
+
+
+
+body{
+
+    background:var(--background);
+
+    color:var(--white);
+
+    font-family:Inter,Arial,sans-serif;
+
+    min-height:100vh;
+
+}
+
+
+
+
+
+
+/* ==================================
+HEADER
+================================== */
+
+
+.hero{
+
+    text-align:center;
+
+    padding:60px 20px 40px;
+
+}
+
+
+
+.logo-icon{
+
+    font-size:70px;
+
+}
+
+
+
+.logo h1{
+
+    font-family:Oswald,Arial;
+
+    font-size:55px;
+
+    letter-spacing:4px;
+
+}
+
+
+
+.logo p{
+
+    margin-top:10px;
+
+    color:var(--grey);
+
+    letter-spacing:5px;
+
+}
+
+
+
+
+
+/* ==================================
+LAYOUT
+================================== */
+
+
+.homepage{
+
+    width:min(95%,1200px);
+
+    margin:auto;
+
+}
+
+
+
+
+
+
+
+/* ==================================
+COMPETITION HEADER
+================================== */
+
+
+.competition-banner{
+
+    text-align:center;
+
+    padding:40px 20px;
+
+    margin-bottom:40px;
+
+    border-top:3px solid var(--red);
+
+    border-bottom:3px solid var(--red);
+
+}
+
+
+
+.competition-banner h2{
+
+    font-family:Oswald;
+
+    font-size:48px;
+
+    margin:15px;
+
+}
+
+
+
+.competition-banner p{
+
+    color:var(--grey);
+
+}
+
+
+
+
+.live-badge{
+
+    background:var(--red);
+
+    padding:8px 20px;
+
+    border-radius:30px;
+
+    font-weight:bold;
+
+    font-size:13px;
+
+}
+
+
+
+
+
+
+
+/* ==================================
+CARDS
+================================== */
+
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+
+}
+
+
+
+.card{
+
+
+    background:var(--surface);
+
+    padding:30px;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    border-top:4px solid var(--red);
+
+}
+
+
+
+.card:hover{
+
+    background:var(--surface-light);
+
+}
+
+
+
+
+
+
+.card h3{
+
+    font-family:Oswald;
+
+    color:var(--gold);
+
+    margin-bottom:20px;
+
+    font-size:28px;
+
+}
+
+
+
+
+
+
+
+/* ==================================
+BUTTONS
+================================== */
+
+
+button,
+.result-button,
+.enter-button{
+
+
+    cursor:pointer;
+
+    border:none;
+
+    font-weight:bold;
+
+}
+
+
+
+.result-button,
+.completed-result button{
+
+
+    margin-top:20px;
+
+    background:var(--red);
+
+    color:white;
+
+    padding:13px 30px;
+
+    border-radius:30px;
+
+}
+
+
+
+.result-button:hover,
+.completed-result button:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+
+
+.delete-button{
+
+    background:#555!important;
+
+}
+
+
+
+
+
+
+
+.enter-button{
+
+
+    display:inline-block;
+
+    margin:50px auto;
+
+    padding:18px 60px;
+
+    background:var(--red);
+
+    color:white;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-size:20px;
+
+}
+
+
+
+
+
+
+
+
+/* ==================================
+FIXTURES
+================================== */
+
+
+.fixture-card{
+
+    text-align:center;
+
+}
+
+
+
+.fixture-group{
+
+    color:var(--gold);
+
+    font-weight:bold;
+
+}
+
+
+
+.fixture-player{
+
+    font-size:30px;
+
+    font-weight:bold;
+
+    margin:15px;
+
+}
+
+
+
+.fixture-vs{
+
+    color:var(--red);
+
+    font-weight:bold;
+
+}
+
+
+
+.fixture-date{
+
+    color:var(--grey);
+
+    margin-top:20px;
+
+}
+
+
+
+.completed-result{
+
+    margin-top:25px;
+
+    padding-top:20px;
+
+    border-top:1px solid #333;
+
+}
+
+
+
+.completed-result h3{
+
+    font-size:40px;
+
+}
+
+
+
+
+
+
+
+/* ==================================
+TABLES
+================================== */
+
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:20px;
+
+}
+
+
+
+th{
+
+    color:var(--gold);
+
+    padding:12px;
+
+}
+
+
+
+td{
+
+    padding:12px;
+
+    text-align:center;
+
+    border-bottom:1px solid #333;
+
+}
+
+
+
+
+
+.leader-row{
+
+
+    background:var(--green);
+
+    color:white;
+
+    font-weight:bold;
+
+}
+
+
+
+
+
+
+
+
+/* ==================================
+PROGRESS BAR
+================================== */
+
+
+.progress-bar{
+
+    height:15px;
+
+    background:#333;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    margin-top:20px;
+
+}
+
+
+
+.progress-fill{
+
+    height:100%;
+
+    width:0%;
+
+    background:var(--green);
+
+    transition:.5s;
+
+}
+
+
+
+
+
+
+
+
+/* ==================================
+TABS
+================================== */
+
+
+.competition-tabs{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:50px;
+
+}
+
+
+
+.competition-tabs button{
+
+
+    background:var(--surface);
+
+    color:white;
+
+    padding:15px 30px;
+
+    border-radius:50px;
+
+}
+
+
+
+.competition-tabs .active{
+
+    background:var(--red);
+
+}
+
+
+
+
+
+
+
+/* ==================================
+RESULT MODAL
+================================== */
+
+
+#resultModal{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.85);
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999;
+
+}
+
+
+
+#resultModal.show{
+
+    display:flex;
+
+}
+
+
+
+
+.modal-content{
+
+
+    background:var(--surface);
+
+    padding:35px;
+
+    width:min(90%,450px);
+
+    border-radius:20px;
+
+}
+
+
+
+.modal-content input{
+
+
+    width:100%;
+
+    padding:12px;
+
+    margin:10px 0 20px;
+
+    border-radius:8px;
+
+    border:none;
+
+}
+
+
+
+.modal-content button{
+
+    width:100%;
+
+    padding:15px;
+
+    background:var(--red);
+
+    color:white;
+
+    border-radius:30px;
+
+}
+
+
+
+
+
+
+
+/* ==================================
+FOOTER
+================================== */
+
+
+footer{
+
+    text-align:center;
+
+    color:var(--grey);
+
+    padding:40px;
+
+}
+
+
+
+
+
+
+
+
+/* ==================================
+MOBILE
+================================== */
+
+
+@media(max-width:700px){
+
+
+.logo h1{
+
+    font-size:32px;
+
+}
+
+
+
+.competition-banner h2{
+
+    font-size:32px;
+
+}
+
+
+
+.fixture-player{
+
+    font-size:24px;
+
+}
+
+
+
+.enter-button{
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+
+table{
+
+    font-size:13px;
+
+}
+
+
+}
+/* ===========================
+KNOCKOUT BRACKET
+=========================== */
+
+
+.knockout-card{
+
+    text-align:center;
+
+}
+
+
+
+.knockout-card strong{
+
+    display:block;
+
+    margin:15px;
+
+    color:#d90429;
+
+}
+
+
+
+.final-card{
+
+    margin:40px auto;
+
+    max-width:400px;
+
+    text-align:center;
+
+    border-top:4px solid #f4c430;
+
+}
+/* ===========================
+KNOCKOUT PLAYERS
+=========================== */
+
+
+.knockout-player{
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    margin:15px;
+
+}
+
+
+
+.knockout-card strong{
+
+    color:#d90429;
+
+    display:block;
+
+    margin:10px;
+
+}
+.fixture-edit-button{
+
+    margin-top:15px;
+
+    background:#333;
+
+    color:white;
+
+    padding:12px 25px;
+
+    border-radius:30px;
+
+}
+/* ===========================
+FIXTURE MODAL
+=========================== */
+
+
+#fixtureModal{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.85);
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999;
+
+}
+
+
+
+#fixtureModal.show{
+
+    display:flex;
+
+}
+.fixture-day-title{
+
+    margin:35px 0 15px;
+
+    color:#f4c430;
+
+    font-family:Oswald,Arial;
+
+    font-size:32px;
+
+    text-align:center;
+
+}
+/* =======================================
+   MODERN FIXTURE FILTER
+======================================= */
+
+
+.fixture-filter{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin:25px auto 35px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.fixture-filter label{
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+
+
+
+
+.fixture-filter select{
+
+
+    appearance:none;
+
+    background:#111;
+
+    color:white;
+
+    border:2px solid #f4c430;
+
+    padding:12px 45px 12px 20px;
+
+    border-radius:30px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+
+}
+
+
+
+
+
+.fixture-filter select:hover{
+
+
+    border-color:white;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =======================================
+   MODERN FIXTURE BUTTONS
+======================================= */
+
+
+.fixture-card button{
+
+
+    border:none;
+
+    padding:12px 22px;
+
+    margin:8px 5px;
+
+    border-radius:30px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.25s ease;
+
+
+}
+
+
+
+
+
+
+.fixture-card button:hover{
+
+
+    transform:translateY(-2px);
+
+    opacity:0.9;
+
+
+}
+
+
+
+
+
+
+
+
+.result-button{
+
+
+    background:#1db954;
+
+    color:white;
+
+
+}
+
+
+
+
+
+
+
+.fixture-edit-button{
+
+
+    background:#f4c430;
+
+    color:#111;
+
+
+}
+
+
+
+
+
+
+
+.delete-button{
+
+
+    background:#d9534f;
+
+    color:white;
+
+
+}
+
+
+
+
+
+
+
+
+
+.completed-result button{
+
+
+    margin-top:10px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =======================================
+   FIXTURE CARDS
+======================================= */
+
+
+.fixture-card{
+
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+
+
+
+
+.fixture-group{
+
+
+    font-size:14px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    margin-bottom:15px;
+
+    opacity:0.8;
+
+
+}
+
+
+
+
+
+.fixture-player{
+
+
+    font-size:24px;
+
+    font-weight:700;
+
+    margin:8px;
+
+
+}
+
+
+
+
+
+.fixture-vs{
+
+
+    font-size:18px;
+
+    font-weight:700;
+
+    margin:10px;
+
+    opacity:0.7;
+
+
+}
+
+
+
+
+
+.fixture-date{
+
+
+    margin:20px 0;
+
+    font-size:16px;
+
+    font-weight:600;
+
+
+}
+/* =======================================
+   MODERN FIXTURE EDIT POPUP
+======================================= */
+
+
+#fixtureModal{
+
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,0.75);
+
+    backdrop-filter:blur(6px);
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+
+}
+
+
+
+
+#fixtureModal.show{
+
+
+    display:flex;
+
+
+}
+
+
+
+
+
+
+
+
+#fixtureModal .modal-content{
+
+
+    background:#161616;
+
+    width:90%;
+
+    max-width:450px;
+
+    border-radius:25px;
+
+    padding:35px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,0.5);
+
+    text-align:center;
+
+
+}
+
+
+
+
+
+
+
+
+.fixture-editor-title{
+
+
+    font-size:28px;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+}
+
+
+
+
+
+.fixture-editor-match{
+
+
+    font-size:22px;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+
+
+.fixture-editor-field{
+
+
+    text-align:left;
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+
+.fixture-editor-field label{
+
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+
+}
+
+
+
+
+
+.fixture-editor-field input{
+
+
+    width:100%;
+
+    box-sizing:border-box;
+
+    padding:14px;
+
+    border-radius:15px;
+
+    border:2px solid #333;
+
+    background:#222;
+
+    color:white;
+
+    font-size:16px;
+
+
+}
+
+
+
+
+
+.fixture-editor-field input:focus{
+
+
+    outline:none;
+
+    border-color:#f4c430;
+
+
+}
+
+
+
+
+
+
+
+.fixture-save-button{
+
+
+    width:100%;
+
+    margin-top:15px;
+
+    background:#f4c430;
+
+    color:#111;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:30px;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+
+}
+
+
+
+
+.fixture-save-button:hover{
+
+
+    transform:translateY(-2px);
+
+
+}
+
+
+
+
+
+
+
+
+.fixture-close-button{
+
+
+    width:100%;
+
+    margin-top:10px;
+
+    background:#333;
+
+    color:white;
+
+    border:none;
+
+    padding:14px;
+
+    border-radius:30px;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+
+}
+/* =======================================
+   KNOCKOUT BRACKET STYLING
+======================================= */
+
+
+
+.knockout-round{
+
+
+    margin-bottom:40px;
+
+    text-align:center;
+
+
+}
+
+
+
+
+.knockout-round h3{
+
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+    font-family:Oswald,Arial;
+
+}
+
+
+
+
+
+
+
+.knockout-card{
+
+
+    max-width:350px;
+
+    margin:20px auto;
+
+    padding:30px;
+
+    text-align:center;
+
+
+}
+
+
+
+
+
+
+
+.knockout-player{
+
+
+    font-size:22px;
+
+    font-weight:700;
+
+    margin:15px 0;
+
+
+}
+
+
+
+
+
+
+
+.knockout-score{
+
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:#f4c430;
+
+    margin:20px;
+
+
+}
+
+
+
+
+
+
+
+.knockout-result-button{
+
+
+    background:#f4c430;
+
+    color:#111;
+
+    border:none;
+
+    padding:14px 30px;
+
+    border-radius:30px;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+
+}
+
+
+
+
+
+
+
+.knockout-result-button:hover{
+
+
+    transform:translateY(-2px);
+
+
+}
+
+
+
+
+
+
+
+.winner-display{
+
+
+    margin-top:20px;
+
+    padding:15px;
+
+    background:#1db954;
+
+    color:white;
+
+    border-radius:25px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =======================================
+   KNOCKOUT RESULT POPUP
+======================================= */
+
+
+#knockoutModal{
+
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.75);
+
+    backdrop-filter:blur(5px);
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+
+}
+
+
+
+
+
+
+
+#knockoutModal.show{
+
+
+    display:flex;
+
+
+}
+
+
+
+
+
+
+
+#knockoutModal .modal-content{
+
+
+    background:#161616;
+
+    width:90%;
+
+    max-width:420px;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+
+}
+
+
+
+
+
+
+
+#knockoutModal h2{
+
+
+    margin-bottom:20px;
+
+    font-size:28px;
+
+
+}
+
+
+
+
+
+
+
+#knockoutModal input{
+
+
+    width:100%;
+
+    box-sizing:border-box;
+
+    padding:15px;
+
+    margin:10px 0;
+
+    border-radius:15px;
+
+    border:2px solid #333;
+
+    background:#222;
+
+    color:white;
+
+    font-size:18px;
+
+    text-align:center;
+
+
+}
+
+
+
+
+
+
+
+#knockoutModal input:focus{
+
+
+    outline:none;
+
+    border-color:#f4c430;
+
+
+}
+
+
+
+
+
+
+
+#knockoutModal button{
+
+
+    width:100%;
+
+    margin-top:15px;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#f4c430;
+
+    color:#111;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+
+}
+
+
+
+
+
+
+
+
+/* =======================================
+   CHAMPION DISPLAY
+======================================= */
+
+
+.champion-card{
+
+
+    background:#f4c430;
+
+    color:#111;
+
+    padding:25px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    font-size:28px;
+
+    font-weight:800;
+
+    margin-top:30px;
+
+
+}
+/* =======================================
+   STATISTICS PAGE
+======================================= */
+
+
+
+.stats-grid{
+
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+
+
+
+
+.stat-card{
+
+
+    text-align:center;
+
+    padding:30px;
+
+
+}
+
+
+
+
+
+
+
+.stat-card h3{
+
+
+    font-size:20px;
+
+    margin-bottom:20px;
+
+    font-family:Oswald,Arial;
+
+
+}
+
+
+
+
+
+
+
+.stat-card h2{
+
+
+    font-size:30px;
+
+    margin:15px 0;
+
+    color:#f4c430;
+
+
+}
+
+
+
+
+
+
+
+.stat-card p{
+
+
+    font-size:18px;
+
+    font-weight:700;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =======================================
+   PLAYER RANKINGS
+======================================= */
+
+
+
+.rankings-card{
+
+
+    padding:30px;
+
+}
+
+
+
+
+
+.rankings-card h3{
+
+
+    text-align:center;
+
+    font-size:26px;
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+
+
+
+
+.ranking-row{
+
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px;
+
+    margin-bottom:10px;
+
+    background:#222;
+
+    border-radius:15px;
+
+    gap:15px;
+
+
+}
+
+
+
+
+
+
+
+.ranking-row strong{
+
+
+    font-size:18px;
+
+
+}
+
+
+
+
+
+
+
+.ranking-row span{
+
+
+    font-size:15px;
+
+    opacity:.9;
+
+    text-align:right;
+
+
+}
+
+
+
+
+
+
+
+.ranking-row:first-child{
+
+
+    border:2px solid #f4c430;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =======================================
+   MOBILE STATS
+======================================= */
+
+
+
+@media(max-width:600px){
+
+
+
+    .ranking-row{
+
+
+        flex-direction:column;
+
+        text-align:center;
+
+
+    }
+
+
+
+
+
+    .ranking-row span{
+
+
+        text-align:center;
+
+
+    }
+
+
+}
+.competition-card{
+
+    display:block;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#161616;
+
+    border-radius:25px;
+
+    padding:35px;
+
+    text-align:center;
+
+    border:2px solid #f4c430;
+
+    transition:.25s ease;
+
+}
+
+
+.competition-card:hover{
+
+    transform:translateY(-5px);
+
+    background:#222;
+
+}
+
+
+.competition-card h2{
+
+    color:#f4c430;
+
+    font-size:32px;
+
+    margin-bottom:15px;
+
+}
+
+
+.competition-card p{
+
+    font-size:16px;
+
+}
